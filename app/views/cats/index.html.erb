@@ -1,0 +1,12 @@
+This page shows ALL THE CATS!
+
+<% @cats.each do |cat| %>
+  <h2><%= cat.name %></h2>
+  <ul>
+    <li><%= cat.color %></li>
+    <li><%= cat.birth_date %></li>
+    <li><%= cat.sex %></li>
+    <li><%= cat.description %></li>
+  </ul>
+  <% end %>
+

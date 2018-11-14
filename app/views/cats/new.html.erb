@@ -1,0 +1,40 @@
+<h1>I never knew making new cats was so hard...</h1>
+<br>
+<h4>
+<form action="<%= cats_url %>" method="post">
+    <label for="name">Name</label>
+    <input id="name" type="text" name="cat[name]">
+    
+    <br>bv
+    
+    <label for="sex">Sex </label>
+     M <input id="sex" type="radio" name="cat[sex]" value="M">
+     F <input id="sex" type="radio" name="cat[sex]" value="F">
+    
+    <br>
+    <label for="color">Color</label>
+    
+    <select id="color" name="cat[color]">
+    <option disabled select>-Please select-</option>
+    
+    <%Cat::COLORS.each do |color|  %> 
+     <option value="<%=color%>"><%= color %></option>
+    <%end%> 
+    </select>
+
+    <br>
+    
+    <label for="birth_date">Date of Birth</label>
+    <input id="birth_date" type="date" name="cat[birth_date]">
+    
+    <br> 
+    <br>
+    
+    <label for="description">Description</label>
+    <br>
+    <textarea name="cat[description]" rows="8" cols="80"></textarea>
+
+    <br>
+    <input type="submit" value="Add cat">
+</form>
+</h4>
